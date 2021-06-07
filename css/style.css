@@ -1,0 +1,2283 @@
+@charset "UTF-8";
+/*--- Fonts Include ---*/
+@font-face {
+  font-family: "Lifehack";
+  src: url("../fonts/Lifehack/Lifehack-Medium.eot");
+  src: url("../fonts/Lifehack-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lifehack-Medium.woff2") format("woff2"), url("../fonts/Lifehack-Medium.woff") format("woff"), url("../font/Lifehack-Medium.ttf") format("truetype"), url("../fonts/Lifehack-Medium.svg#Lifehack-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Light.eot");
+  src: url("../fonts/Montserrat/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Light.svg#Lifehack-Medium") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Regular.svg#Lifehack-Medium") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Medium.svg#Lifehack-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-SemiBold.svg#Lifehack-Medium") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
+  src: url("../fonts/Montserrat/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Bold.svg#Lifehack-Medium") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot");
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-ExtraBold.svg#Lifehack-Medium") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* ------ Basic Style ------ */
+/*Arcticmodal*/
+.arcticmodal-container,
+.arcticmodal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.arcticmodal-container {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+}
+
+.arcticmodal-container_i {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.arcticmodal-container_i2 {
+  padding: 24px;
+  margin: 0;
+  border: 0;
+  vertical-align: middle;
+}
+
+.arcticmodal-error {
+  padding: 20px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+}
+
+.arcticmodal-loading {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #000 url(loading.gif) no-repeat 50% 50%;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+}
+
+div,
+p,
+form,
+input,
+a,
+span,
+button {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+h4 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 100%;
+  color: #000000;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+input,
+button {
+  border: none;
+}
+
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active,
+a,
+a:hover,
+a:focus,
+a:active {
+  outline: none;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.page {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding-left: 35rem;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.title-page {
+  font-weight: 600;
+  color: #165cc5;
+  padding-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn {
+  display: block;
+  width: 243px;
+  height: 53px;
+  border-radius: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9149), to(#ff6c0d));
+  background: linear-gradient(180deg, #ff9149 0%, #ff6c0d 100%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 1.8rem;
+  color: #fff;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.footer__btn {
+  background: #2ac194;
+}
+
+#loader {
+  position: fixed;
+  z-index: 9999999;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 240, 240, 0.81);
+  overflow: hidden;
+  display: none;
+}
+
+label.error {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  display: none !important;
+}
+
+input.error {
+  border: 2px solid red !important;
+}
+
+input.valid {
+  border: 2px solid green !important;
+}
+
+#loader img {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 10000;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 999;
+  -webkit-animation: fade 0.6s;
+  animation: fade 0.6s;
+  overflow: auto;
+}
+
+#thx {
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 506px;
+  height: 428px;
+  text-align: center;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#thx p {
+  max-width: 350px;
+  line-height: 34px;
+  margin: 0 auto;
+  font-size: 2.8rem;
+}
+
+#thx p:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.button__btn {
+  padding: 0;
+  background: #2ac194;
+}
+
+.main-swiper-container {
+  width: 100%;
+  height: 500px;
+  background: #cfcfcf;
+}
+
+.implant-tooth__swiper-container {
+  width: 100%;
+  height: 320px;
+}
+
+.implant-tooth__swiper-img {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.implant-tooth__swiper-img img {
+  width: 100%;
+}
+
+.common__swiper-button-prev,
+.common__swiper-button-next {
+  top: calc(100% - calc(var(--swiper-navigation-size) / 44 * 27));
+}
+
+.common__swiper-button-prev,
+.common__swiper-container-rtl .swiper-button-next .common__swiper-button-prev,
+.common__swiper-container-rtl .swiper-button-next {
+  left: 35%;
+}
+
+.common__swiper-button-prev:after,
+.common__swiper-container-rtl .swiper-button-next:after {
+  content: url(../img/_prew.png);
+}
+
+.common__swiper-button-next,
+.common__swiper-container-rtl .swiper-button-prev {
+  right: 35%;
+}
+
+.common__swiper-button-next:after,
+.common__swiper-container-rtl .swiper-button-prev:after {
+  content: url(../img/_next.png);
+}
+
+/* Common Styles */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 24px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #80b3ff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1d67d7;
+}
+
+.aside {
+  position: fixed;
+  z-index: 9999;
+  width: 35rem;
+  max-height: 900px;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 55px;
+  padding-bottom: 120px;
+  background-color: #1d67d7;
+  overflow-y: scroll;
+}
+
+.aside::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  background: transparent;
+}
+
+.aside::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+
+.aside::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #11598a;
+}
+
+.aside__title,
+.telephone {
+  color: #fff;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 1.7rem;
+}
+
+.menu__link {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.telephone {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.aside__logo {
+  margin-bottom: 6rem;
+}
+
+.aside__title,
+.aside__menu,
+.aside__btn {
+  margin-bottom: 7.4rem;
+}
+
+.main-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-wrapper {
+  max-width: 722px;
+  width: 100%;
+  min-height: 900px;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+}
+
+.main-banner {
+  margin-bottom: 45px;
+}
+
+.offer_wrap {
+  margin-bottom: 0;
+}
+
+.impl-slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 60px;
+}
+
+.offer_wrap {
+  padding-left: 85px;
+}
+
+.main-page__offer-title {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.main-page__offer-title a {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 137%;
+  color: #000000;
+}
+
+.main-page__offer-description {
+  width: 100%;
+  max-width: 540px;
+}
+
+.main-page__offer-description a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 152%;
+  color: #000000;
+}
+
+.impl-to-key,
+.impl-3d,
+.impl-all-on-4,
+.impl-laser,
+.impl-one-day {
+  width: 100%;
+  height: 500px;
+  background: no-repeat center top / cover;
+}
+
+.impl-to-key {
+  background-image: url(../img/offer_slide-01.png);
+}
+
+.impl-3d {
+  background-image: url(../img/offer_slide-02.png);
+}
+
+.impl-all-on-4 {
+  background-image: url(../img/offer_slide-03.png);
+}
+
+.impl-laser {
+  background-image: url(../img/offer_slide-04.png);
+}
+
+.impl-one-day {
+  background-image: url(../img/offer_slide-05.png);
+}
+
+.main-opinion {
+  min-width: 0;
+}
+
+.opinion__swiper-container {
+  width: 100%;
+  height: 250px;
+}
+
+.opinion__wrapp {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 85px;
+  padding-right: 45px;
+  overflow: hidden;
+}
+
+.opinion__txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 152%;
+  color: #000000;
+  padding-right: 30px;
+}
+
+.opinion__title {
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 137%;
+  color: #000000;
+  margin-bottom: 22px;
+  padding-left: 85px;
+}
+
+.opinion__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opinion__img img {
+  max-width: 100%;
+}
+
+.main-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background-color: #1d67d7;
+  max-width: 372px;
+}
+
+.main-method__title {
+  display: block;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: 0.075em;
+  text-align: center;
+  width: 59px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.main-method__list {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.main-method__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 231px;
+  color: #165cc5;
+  padding: 30px 16px 21px 36px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+
+.main-method__item a:hover {
+  color: #165cc5;
+}
+
+.main-method__overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  z-index: -1;
+}
+
+.main-method__item:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-method__item p {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 226px;
+  text-align: left;
+}
+
+.main-method__link {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #165cc5;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: right;
+}
+
+.main-method__item_anesthetize {
+  background: url(../img/tech-pic01.png) no-repeat left top/cover;
+}
+
+.main-method__item_micro {
+  background: url(../img/tech-pic02.png) no-repeat right top/cover;
+}
+
+.main-method__item_sonicweld {
+  background: url(../img/tech-pic03.png) no-repeat left top/cover;
+}
+
+.main-method__item_dental {
+  background: url(../img/tech-pic04.png) no-repeat right top/cover;
+}
+
+/*----- Страница Наши Услуги -----*/
+.our-services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.our-services__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.our-services__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 207px;
+  height: 207px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  background: no-repeat center / contain;
+}
+
+.our-services__link {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #165cc5;
+  text-shadow: 0px 2px 5px #ececec;
+}
+
+.our-services__link:hover {
+  color: #1d67d7;
+  text-decoration: underline;
+}
+
+.our-services__name_implant {
+  background-image: url("../img/our__services/services_img-01.png");
+}
+
+.our-services__name_implant:hover {
+  background-image: url("../img/our__services/services_img-01_hov.png");
+}
+
+.our-services__name_terapevt {
+  background-image: url("../img/our__services/services_img-02.png");
+}
+
+.our-services__name_terapevt:hover {
+  background-image: url("../img/our__services/services_img-02_hov.png");
+}
+
+.our-services__name_hirurg {
+  background-image: url("../img/our__services/services_img-03.png");
+}
+
+.our-services__name_hirurg:hover {
+  background-image: url("../img/our__services/services_img-03_hov.png");
+}
+
+.our-services__name_protez {
+  background-image: url("../img/our__services/services_img-04.png");
+}
+
+.our-services__name_protez:hover {
+  background-image: url("../img/our__services/services_img-04_hov.png");
+}
+
+.our-services__name_narkoz {
+  background-image: url("../img/our__services/services_img-05.png");
+}
+
+.our-services__name_narkoz:hover {
+  background-image: url("../img/our__services/services_img-05_hov.png");
+}
+
+.our-services__name_chel {
+  background-image: url("../img/our__services/services_img-06.png");
+}
+
+.our-services__name_chel:hover {
+  background-image: url("../img/our__services/services_img-06_hov.png");
+}
+
+.our-services__name_gig {
+  background-image: url("../img/our__services/services_img-07.png");
+}
+
+.our-services__name_gig:hover {
+  background-image: url("../img/our__services/services_img-07_hov.png");
+}
+
+.our-services__name_orto {
+  background-image: url("../img/our__services/services_img-08.png");
+}
+
+.our-services__name_orto:hover {
+  background-image: url("../img/our__services/services_img-08_hov.png");
+}
+
+.our-services__name_paradont {
+  background-image: url("../img/our__services/services_img-09.png");
+}
+
+.our-services__name_paradont:hover {
+  background-image: url("../img/our__services/services_img-09_hov.png");
+}
+
+/* ---- О линике Стили -----*/
+.our-clinic__wrapper {
+  padding-bottom: 3.5rem;
+}
+
+.our-clinic__block {
+  margin-bottom: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info__txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #000;
+}
+
+.info__txt span {
+  display: block;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 152%;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.info__txt p {
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 152%;
+  margin-bottom: 3rem;
+}
+
+.our-clinic__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.our-clinic__info img {
+  width: 100%;
+}
+
+/*--- Наши технологии СТИЛИ ----*/
+.our-method__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.our-method__item {
+  display: block;
+  width: 28rem;
+  margin-bottom: 3rem;
+}
+
+.our-method__img {
+  height: 12.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.our-method__img img {
+  width: 100%;
+}
+
+.our-method__name {
+  padding: 10px;
+  background: #1d67d7;
+}
+
+.our-method__name span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.our-method__info {
+  padding-top: 1.8rem;
+}
+
+.our-method__info p {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #515151;
+  line-height: 1.2;
+}
+
+.method-header__breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.method-header__breadcrumbs span {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.method-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50rem;
+  max-height: 100%;
+  background: no-repeat center / cover;
+  padding: 4.5rem 5.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.method-header__breadcrumbs span {
+  color: black;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 80%;
+}
+
+.method-header__breadcrumbs a {
+  color: black;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 80%;
+}
+
+.method-header__title {
+  padding-bottom: 1rem;
+}
+
+.method-header__txt {
+  max-width: 56rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 152%;
+}
+
+.method-content {
+  margin-bottom: 7rem;
+}
+
+.method-content__item {
+  margin-bottom: 3.5rem;
+}
+
+.method-content__title {
+  margin-bottom: 1rem;
+}
+
+.method-content__info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.method-content__info p {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 152%;
+}
+
+.method-content__service {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.method-content__service img {
+  max-width: 100%;
+}
+
+.our-sevice_block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/*--- Стилизация блока с ценами ---*/
+/*
+.our-prices__item {
+	width: 100%;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.price {
+	padding-left: 4rem;
+	line-height: 152%;
+}
+
+.our-prices__item-title {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	&::after {
+		content: "\25BC";
+		position: absolute;
+		color: #c4c4c4;
+		font-size: 3rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		margin-left: 1rem;
+	}
+}
+
+.our-prices__item-content {
+	font-size: 2.2rem;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+
+.our-prices__item.active .our-prices__item-content {
+	height: 100%;
+	padding-top: 2.4rem;
+	padding-bottom: 3.4rem;
+}
+
+.our-prices__item.active .our-prices__item-title::after {
+	content: "\25B2";
+}
+
+.our-prices__caption {
+	position: relative;
+	&::after {
+		content: "\25BC";
+		position: absolute;
+		color: #c4c4c4;
+		font-size: 3rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		margin-left: 1rem;
+	}
+}
+
+.our-prices__caption.ui-state-active .our-prices__caption::after {
+	content: "\25B2";
+}
+
+*/
+.our-price__block {
+  max-width: 920px;
+  width: 100%;
+}
+
+.our-price__item {
+  margin-bottom: 17px;
+}
+
+.our-price__heading {
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  color: #000;
+}
+
+.our-price__title {
+  display: inline-block;
+  position: relative;
+}
+
+.our-price__title::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../img/accord-arrow.png) no-repeat center;
+  right: -30px;
+  top: -3px;
+}
+
+.our-price__item.active .our-price__title:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 0;
+}
+
+.our-price__content {
+  display: none;
+  padding: 24px 0 44px 40px;
+  max-width: 890px;
+}
+
+.our-price__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  position: relative;
+  margin-left: 10px;
+  position: relative;
+}
+
+.our-price__list li::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #000;
+  left: -10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.footer {
+  padding-bottom: 5rem;
+}
+
+.footer__title {
+  padding: 1.3rem 0 1.3rem 2.7rem;
+  background-color: #1d67d7;
+  margin-bottom: 6.5rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  /*
+	&::after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		left: 0.5rem;
+		top: 0;
+		width: 100%;
+		background-color: $primary-color;
+		z-index: 0;
+	}
+	*/
+}
+
+.footer__title h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 137%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer__title h3 span {
+  font-weight: 700;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__offer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer__txt {
+  margin-bottom: 5rem;
+}
+
+.footer__item {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 152%;
+  color: #000000;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1.7rem;
+}
+
+.footer__item::before {
+  content: url("../img/our-prices/mdi_check_circle_outline.png");
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.footer__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer__img img {
+  max-width: 100%;
+}
+
+/*----- Рассрочка СТИЛИ -----*/
+.our-installment {
+  padding-bottom: 9rem;
+}
+
+.our-installment__table {
+  margin-bottom: 4rem;
+}
+
+.our-installment__table img {
+  width: 100%;
+}
+
+.chapter {
+  margin-bottom: 50px;
+}
+
+.chapter__title {
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.chapter__title span {
+  display: block;
+  font-weight: 600;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.chapter__list {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.chapter__item {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.chapter__item span {
+  font-size: 3rem;
+}
+
+.our-installment__btn a {
+  display: block;
+  width: 29rem;
+  border-radius: 2.7rem;
+  background-color: #2ac194;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contact-data {
+  padding-bottom: 3.5rem;
+}
+
+.contact-data__name {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #165cc5;
+  padding-top: 1.9rem;
+  padding-bottom: 1.3rem;
+}
+
+.contact-data__txt,
+.contact-data__phonenum {
+  font-size: 2.2rem;
+  color: #000;
+  padding-bottom: 1rem;
+}
+
+.contact-data__phonenum:hover {
+  color: #000;
+}
+
+.contact-data__opening-hours {
+  margin-bottom: 30px;
+}
+
+.map {
+  width: 100%;
+  height: 40rem;
+}
+
+/*--- Технология Лечение под микроскопом ---*/
+.method-header_microscope {
+  background-image: url("../img/our-method/header_microscope.png");
+}
+
+.method-header_sonicweld {
+  background-image: url("../img/our-method/header_SONICWELD.png");
+}
+
+.method-header_dental {
+  background-image: url("../img/our-method/header_dental.png");
+}
+
+.method-header_impl {
+  background-image: url("../img/our__services/header_implant.png");
+}
+
+.our-sevice_block-link a {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 152%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #165cc5;
+}
+
+.implant-tooth-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50rem;
+  max-height: 100%;
+  background: no-repeat center top / cover;
+  padding: 4.5rem 5.5rem;
+  margin-bottom: 5rem;
+}
+
+.implant-tooth-header_key {
+  background-image: url(../img/our__services/key-img.png);
+}
+
+.implant-tooth-header_3d {
+  background-image: url(../img/our__services/3d-img.png);
+}
+
+.implant-tooth-header_all4 {
+  background-image: url(../img/our__services/all-4-img.png);
+}
+
+.implant-tooth-header_laser {
+  background-image: url(../img/our__services/laser-imh.png);
+}
+
+.implant-tooth-header_one-day {
+  background-image: url(../img/our__services/one-day-img.png);
+}
+
+.implant-tooth-header__breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.implant-tooth-header__breadcrumbs span {
+  color: black;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 150%;
+}
+
+.implant-tooth-header__breadcrumbs a {
+  color: black;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 150%;
+}
+
+.implant-tooth-header__title {
+  padding-bottom: 3rem;
+}
+
+.implant-tooth-header__txt {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 152%;
+  padding-left: 4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.implant-tooth-header__txt::before {
+  content: url("../img/our-prices/mdi_check_circle_outline.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.implant-tooth__block-subtitle {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.implant-tooth__block-subtitle h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 137%;
+}
+
+.implant-tooth__block-info {
+  margin-bottom: 4rem;
+}
+
+.implant-tooth__block-info p {
+  font-size: 2rem;
+  line-height: 152%;
+}
+
+.step__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step__title p {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 152%;
+}
+
+.step__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 3rem;
+}
+
+.step__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.step__img img {
+  width: 100%;
+  max-width: 375px;
+}
+
+.implant-tooth__advantage {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.implant-tooth__advantage-item {
+  height: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.implant-tooth__advantage-ico {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #1d67d7;
+  text-align: center;
+  padding: 1.8rem 0;
+}
+
+.implant-tooth__button {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.implant-tooth__button a {
+  display: block;
+  width: 290px;
+  height: 60px;
+  border: 1px solid #165cc5;
+  border-radius: 30px;
+  text-align: center;
+  color: #165cc5;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-top: 21px;
+}
+
+/*Page Servis Implant*/
+.info-content__wrap.d-flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+
+.info-content__img_left {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  margin-right: 0;
+  margin: 0 auto;
+}
+
+.info-content__img_right {
+  margin: 30px 0;
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.info-content__img_right img {
+  max-width: 100%;
+}
+
+.info-content__list {
+  margin-bottom: 50px;
+}
+
+.price-call__img,
+.call__img {
+  margin-right: 0;
+}
+
+.implant-tooth__swiper {
+  padding-bottom: 60px;
+  margin-top: 40px;
+}
+
+.implant-tooth__swiper-img {
+  text-align: center;
+}
+
+.hamburger-wrapper {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+.hamburger {
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  height: 40px;
+  display: none;
+}
+
+.hamb {
+  width: 45px;
+  height: 42px;
+  margin-left: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 9px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  z-index: 500;
+}
+
+#check-menu {
+  display: none;
+}
+
+.hamburger-title {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.hamburger-line {
+  position: absolute;
+  top: 9px;
+  right: 15px;
+  width: 35px;
+  height: 4px;
+  background-color: #165cc5;
+  z-index: 4;
+  right: 5px;
+}
+
+.line1 {
+  -webkit-transition: 0 all;
+  transition: 0 all;
+}
+
+.line2,
+.line3 {
+  top: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.line4 {
+  top: 30px;
+  -webkit-transition: 0 all;
+  transition: 0 all;
+}
+
+.hamburger-menu {
+  display: block;
+  position: fixed;
+  width: 320px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #165cc5;
+  border-radius: 10px;
+}
+
+.hamburger-menu.active {
+  max-height: 500px;
+  padding-bottom: 40px;
+}
+
+.hamburger-menu__item {
+  display: block;
+  position: relative;
+}
+
+.hamburger-menu__link,
+.hamburger-phone {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hamburger-phone {
+  margin-bottom: 0;
+}
+
+.hamburger-menu__link:before {
+  width: 100%;
+  height: 2px;
+  background: #000;
+  bottom: -5px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hamburger-menu__link:hover:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hamburger.active .line1 {
+  display: none;
+}
+
+.hamburger.active .line2 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hamburger.active .line3 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.hamburger.active .line4 {
+  display: none;
+}
+
+.hamburger-contact {
+  padding: 10px 10px 20px;
+}
+
+.hamburger-logo {
+  padding-top: 30px;
+}
+
+.hamburger-btn {
+  width: 250px;
+  height: 56px;
+  margin: 20px auto 18px auto;
+  font-size: 1.8rem;
+}
+
+.hamburger-btn span {
+  display: block;
+  font-size: 1.6rem;
+}
+
+/*Modals*/
+.form {
+  width: 506px;
+  background: #fff;
+  padding: 48px 48px 35px 35px;
+  position: relative;
+}
+
+.form__title {
+  font-size: 2.8rem;
+  line-height: 34px;
+  text-transform: initial;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+.form__input {
+  width: 423px;
+  height: 60px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 90px;
+  display: block;
+  margin-top: 26px;
+  font-size: 21px;
+  padding-left: 33px;
+}
+
+.form__note {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 17px;
+}
+
+.form__btn {
+  margin-top: 30px;
+}
+
+.box-modal_close,
+.menu-close {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  right: 10px;
+  top: 10px;
+  line-height: 15px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.box-modal_close:hover span,
+.box-modal_close:hover:before {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.box-modal_close:before,
+.menu-close:before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 22px;
+  background: #000;
+  -webkit-transform: rotate(-45deg) translate(0px, 0px);
+  transform: rotate(-45deg) translate(0px, 0px);
+}
+
+.box-modal_close span,
+.menu-close span {
+  cursor: pointer;
+  height: 3px;
+  width: 22px;
+  background: #000;
+  display: block;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: relative;
+}
+
+/*----- Базовые медиа запросы -----*/
+@media screen and (max-width: 1300px) {
+  .main-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-wrapper {
+    max-width: 1300px;
+    width: 100%;
+    min-height: 900px;
+    height: 100%;
+    position: relative;
+    min-width: 0;
+  }
+  .main-method {
+    max-width: 100%;
+  }
+  .main-method__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main-method__item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .implant-tooth-header__breadcrumbs span,
+  .implant-tooth-header__breadcrumbs a {
+    font-size: 1.3rem;
+  }
+  .step__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .our-price__list li {
+    font-size: 1.7rem;
+    margin-left: 0;
+  }
+  .method-content__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .aside {
+    display: none;
+  }
+  .main-page {
+    display: block;
+  }
+  .main-wrapper {
+    max-width: 991px;
+    width: 100%;
+    min-height: 900px;
+    height: 100%;
+    position: relative;
+    min-width: 0;
+  }
+  .main-banner {
+    margin-bottom: 45px;
+  }
+  .opinion__wrapp {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 50px;
+  }
+  .opinion__title {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 10px;
+  }
+  .offer_wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+  }
+  .content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .implant-tooth-header {
+    padding: 1.5rem 1.5rem;
+  }
+  .our-price__list li {
+    font-size: 1.9rem;
+    margin-left: 0;
+  }
+  .method-content__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .opinion__comment {
+    font-size: 12px;
+  }
+  .our-clinic__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .method-header {
+    padding: 55px 15px 20px;
+  }
+  .method-content__info p {
+    font-size: 16px;
+  }
+  .method-content__service {
+    margin-right: 5px;
+    text-align: center;
+  }
+  .method-content__price {
+    width: 70px;
+  }
+  .method-content__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .our-sevice_block-right {
+    padding: 0;
+  }
+  .method-content__title {
+    padding-top: 25px;
+  }
+  .our-price,
+  .our-prices-title {
+    padding-left: 0;
+  }
+  .our-price__list li {
+    font-size: 1.7rem;
+  }
+  .our-price__list li::after {
+    top: 14px;
+  }
+  .our-price__list li span {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .implant-tooth-header__title h2 {
+    font-size: 25px;
+  }
+  .implant-tooth-header__txt {
+    font-size: 16px;
+  }
+  .our-services__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .our-method__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .implant-tooth-header__breadcrumbs span,
+  .implant-tooth-header__breadcrumbs a {
+    font-size: 1.3rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  .opinion__swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .opinion__wrapp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+  .implant-tooth__advantage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .implant-tooth__block-price_item p,
+  .implant-tooth__block-price_cost p {
+    font-size: 14px;
+  }
+  .implant-tooth__advantage-item {
+    margin-bottom: 20px;
+  }
+  .opinion__img {
+    margin: 10px auto 15px;
+  }
+  .main-method__item {
+    width: 100%;
+  }
+  .method-header__title h2 {
+    font-size: 23px;
+  }
+  .method-header__breadcrumbs span {
+    font-size: 15px;
+  }
+  .method-header__breadcrumbs a {
+    font-size: 15px;
+  }
+  /*Modals*/
+  .form {
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    padding: 35px;
+    position: relative;
+  }
+  .form__input {
+    max-width: 100%;
+  }
+  .arcticmodal-container_i2 {
+    padding: 5px;
+  }
+  .form__btn {
+    width: 250px;
+    height: 56px;
+    margin: 30px auto 0 auto;
+  }
+  #thx {
+    max-width: 90%;
+    height: 350px;
+  }
+  #thx p {
+    max-width: 320px;
+    line-height: 30px;
+    font-size: 2.5rem;
+  }
+  #thx p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .hamburger-logo {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .our-prices {
+    padding-bottom: 60px;
+  }
+  .our-prices-title {
+    margin-bottom: 30px;
+  }
+  .our-price__title {
+    font-size: 1.7rem;
+  }
+  .our-price__title::after {
+    width: 15px;
+    height: 15px;
+    right: -15px;
+    background-size: 15px;
+  }
+  .our-price__list li::after {
+    top: 10px;
+  }
+  .our-price__content {
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+  /*Modals*/
+  .form {
+    max-width: 290px;
+    padding: 35px 15px;
+  }
+  .form__input {
+    font-size: 18px;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+  ::-moz-placeholder {
+    font-size: 18px;
+  }
+  /* Firefox 19+ */
+  :-moz-placeholder {
+    font-size: 18px;
+  }
+  #thx {
+    max-width: 290px;
+    height: 260px;
+  }
+  #thx p {
+    max-width: 280px;
+    line-height: 30px;
+    font-size: 2.4rem;
+  }
+  .hamburger-menu {
+    width: 290px;
+  }
+}
