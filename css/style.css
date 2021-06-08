@@ -419,7 +419,7 @@ input.valid {
 
 .common__swiper-button-prev:after,
 .common__swiper-container-rtl .swiper-button-next:after {
-  content: url(../img/_prew.png);
+  content: url(../img/prew.png);
 }
 
 .common__swiper-button-next,
@@ -429,7 +429,7 @@ input.valid {
 
 .common__swiper-button-next:after,
 .common__swiper-container-rtl .swiper-button-prev:after {
-  content: url(../img/_next.png);
+  content: url(../img/next.png);
 }
 
 /* Common Styles */
